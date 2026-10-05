@@ -1,0 +1,1 @@
+"""SOL Chat application package."""

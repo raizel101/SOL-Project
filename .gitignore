@@ -1,0 +1,39 @@
+# External extracted corpus, historical deliveries and generated archives.
+/outputs/*
+!/outputs/sol_chat/
+/outputs/sol_chat/*
+# Track only migration shims and the old launcher/config; never generated data.
+!/outputs/sol_chat/server.py
+!/outputs/sol_chat/sol_engine.py
+!/outputs/sol_chat/api_contract.py
+!/outputs/sol_chat/backend_config.py
+!/outputs/sol_chat/web_assets.py
+!/outputs/sol_chat/verify_backend.py
+!/outputs/sol_chat/verify_local.py
+!/outputs/sol_chat/provision_model.py
+!/outputs/sol_chat/start_sol.cmd
+!/outputs/sol_chat/backend_config.json
+/work/
+/reports/*.json
+/reports/*.jpg
+/reports/*.png
+/reports/*.log
+
+# Local runtimes and development tooling.
+/.tools/
+/.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+/build/
+/dist/
+.ruff_cache/
+
+# Never commit credentials, environment files or personal conversations.
+.env
+.env.*
+!.env.example
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.log

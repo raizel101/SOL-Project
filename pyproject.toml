@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sol-chat"
+version = "0.2.0"
+description = "Source-grounded Sri Aurobindo and The Mother reflection application"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["ruff==0.16.10"]
+
+[project.scripts]
+sol-chat = "sol_chat.api.server:main"
+sol-verify-backend = "sol_chat.tools.verify_backend:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+src = ["src"]
+exclude = ["outputs", "work", ".tools", ".venv"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
+ignore = ["E731"]
+
+[tool.ruff.lint.per-file-ignores]
+"src/sol_chat/core/engine.py" = ["F401"]
+# Engine intentionally re-exports the legacy integration helper API.
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"

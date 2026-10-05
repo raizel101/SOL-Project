@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "host": "127.0.0.1",
+  "port": 8765,
+  "index_path": "../outputs/auro_guide_corpus/local_rag.sqlite",
+  "allowed_origins": [],
+  "max_body_bytes": 32768,
+  "engine": {
+    "model": "sol-chat",
+    "ollama_base_url": "http://127.0.0.1:11434"
+  }
+}
